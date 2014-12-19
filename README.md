@@ -1,4 +1,4 @@
 #Eventify#
+Simple upcoming events javascript app
 ========
 
-Simple upcoming events javascript app
