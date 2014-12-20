@@ -5,11 +5,9 @@ demo: http://dellax.github.io/eventify/
 ## Requirements
 they are all included:
 
-[jQuery](http://jquery.com)
-
-[moment.js](http://momentjs.com/)
-
-[Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [jQuery](http://jquery.com)
+* [moment.js](http://momentjs.com/)
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 ## How to use?
 Include these js and css files:
 ```
