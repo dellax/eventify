@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sk">
+	<head>
+		<meta charset="utf-8">
+		<title>Eventify</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/moment.js"></script>
+		<script src="js/eventify.js"></script>
+  	</head>
+  	<body>
+   <!-- Eventify -->
+		<div id="ei-events">
+			<div class="ei-event" data-start="2014-12-24 17:30" data-end="2014-12-24 08:30" data-loc="London">
+				<div class="ei-name">Club opening</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+			<div class="ei-event" data-start="2013-12-26 16:30" data-end="2014-12-29 19:30" data-loc="Paris">
+				<div class="ei-name">IT conf</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+			<div class="ei-event" data-start="2014-12-20 16:30" data-end="2014-12-26 11:30" data-loc="New York">
+				<div class="ei-name">Meteor.js meeting</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+			<div class="ei-event" data-start="2014-12-24 16:30" data-end="2014-12-24 17:30" data-loc="Sidney">
+				<div class="ei-name">Christmas party</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+			<div class="ei-event" data-start="2014-12-28 16:30" data-end="2014-12-28 19:20" data-loc="Madrid">
+				<div class="ei-name">Lorem ipsum dolor</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+			<div class="ei-event" data-start="2014-12-21 16:30" data-end="2014-12-24 16:30" data-loc="London">
+				<div class="ei-name">Lorem ipsum dolor</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+			<div class="ei-event" data-start="2014-12-24 16:30" data-end="2014-12-29 16:30" data-loc="Berlin">
+				<div class="ei-name">Lorem ipsum dolor</div>
+				<div class="ei-description">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+$( "#ei-events" ).eventify({
+    theme: "",
+    locale: "en"
+});
+</script>
