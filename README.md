@@ -56,3 +56,4 @@ locale: "en" // default en
 + pagination and max events per page option
 + show event in lightbox on click
 + responsive - dotdotdot.frebsite.nl
++ css improvements
