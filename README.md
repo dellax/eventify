@@ -50,3 +50,9 @@ HTML code with events:
 theme: "dark" // dark, elegant
 
 locale: "en" // default en
+
+## To do
++ show all events
++ pagination and max events per page option
++ show event in lightbox on click
++ responsive - dotdotdot.frebsite.nl
