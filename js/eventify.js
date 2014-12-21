@@ -33,13 +33,12 @@ function mainEventify(settings) {
 
 	var currentDate = moment();
 
-	// vymysliet komplexnejsie riesenie? aj pre all 
-	function getEvents(data, year, month) {
-		var monthName = moment(month+1,'MM').format('MMMM');
-		var out = ['<div id="ei-events'+settings.theme+'">', '<h2>'+monthName+' '+year+'</h2>', '<div class="ei-events-container">'];
+	// get actual events for month and year
+	function getEvents(data, date) {
+		var out = ['<div id="ei-events'+settings.theme+'">', '<h2>'+date.format('MMMM')+' '+date.year()+'</h2>', '<div class="ei-events-container">'];
 
 		for (i = 0; i < data.length; i++) {
-			if (month === data[i].start.month() && year === data[i].start.year() && currentDate.date() <= data[i].start.date()) {
+			if (date.month() === data[i].start.month() && date.year() === data[i].start.year() && currentDate.date() <= data[i].start.date()) {
 				out.push('<div class="ei-event">');
 					out.push('<div class="ei-date">');
 						out.push('<div class="ei-day">'+data[i].start.date()+'</div>');
@@ -56,13 +55,14 @@ function mainEventify(settings) {
 		}
 
 		out.push('</div>', '</div>');
-		return out.join('\n');
+		out = out.join('\n');
+		$("div"+settings.div.selector+"").replaceWith(out);
 	}
 
-	// write initial data
-	var onPageLoad = getEvents(data, currentDate.year(), currentDate.month());
+	// write initial data on page load
+	getEvents(data, currentDate);
 	
-	$("div"+settings.div.selector+"").replaceWith(onPageLoad);
+	
 }	
 
 (function ($) {
