@@ -13,6 +13,8 @@ they are all included:
 ## How to use?
 Include these js and css files:
 ```
+<link rel="stylesheet" href="css/eventify.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/moment.js"></script>
 <script src="js/eventify.js"></script>
