@@ -1,4 +1,3 @@
-# Eventify
-Simple upcoming events javascript app
+# Eventify demo
 
-demo: http://dellax.github.io/eventify/
+http://dellax.github.io/eventify/
