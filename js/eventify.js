@@ -1,10 +1,11 @@
 //! eventify.js
-//! version : 1.0.0
+//! version : 1.0.1
 //! author: www.github.com/dellax/
 //! license : MIT
 //! https://github.com/dellax/eventify
 
 function mainEventify(settings) {	
+	// load user settings
 	moment.locale(settings.locale);
 	if (settings.theme != "") {
 		settings.theme = '-'+settings.theme;
@@ -35,7 +36,7 @@ function mainEventify(settings) {
 
 	// get actual events for month and year
 	function getEvents(data, date) {
-		var out = ['<div id="ei-events'+settings.theme+'"><div class="ei-nav-container">', '<h2>'+date.format('MMMM')+' '+date.year()+'</h2>','<i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i>', '</div>', '<div class="ei-events-container">'];
+		var out = ['<div id="ei-events'+settings.theme+'"><div class="ei-nav-container">', '<h2>'+date.format('MMMM')+' '+date.year()+'</h2>','<i class="fa fa-chevron-circle-left ei-arrow-left"></i><i class="fa fa-chevron-circle-right ei-arrow-right"></i>', '</div>', '<div class="ei-events-container">'];
 
 		for (i = 0; i < data.length; i++) {
 			if (date.month() === data[i].start.month() && date.year() === data[i].start.year() && currentDate.date() <= data[i].start.date()) {
@@ -57,11 +58,18 @@ function mainEventify(settings) {
 		out.push('</div>', '</div>');
 		out = out.join('\n');
 		$("div"+settings.div.selector+"").replaceWith(out);
+
+		$( ".ei-arrow-left" ).click(function() {
+		  getEvents(data,currentDate.add({months:-1}));
+		});
+
+		$( ".ei-arrow-right" ).click(function() {
+		  getEvents(data,currentDate.add({months:1}));
+		});
 	}
 
 	// write initial data on page load
 	getEvents(data, currentDate);
-	
 	
 }	
 
