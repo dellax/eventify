@@ -1,5 +1,5 @@
 /*
-* Eventify V1.0.0
+* Eventify V1.0.1
 * Copyright 2014
 * www.github.com/dellax/
 * Free to use under the MIT license.
@@ -22,13 +22,31 @@
 /* #ei-events default styles
 ================================================== */
 
+.ei-nav-container {
+}
+
 #ei-events h2 {
+	display: inline;
 	font-family: 'Bebas Neue';
 	font-weight: lighter;
 	font-size: 48px;
 	color: #bfbfbf;
 	margin: 0;
 	padding: 0;
+	padding-right: 10px;
+}
+.ei-nav-arrows {
+	display: inline;
+}
+.ei-nav-container i {
+	display: inline;
+	font-size: 30px;
+	padding: 2px;
+	color: #bfbfbf;
+	line-height: inherit;
+}
+.ei-nav-container i:hover {
+	cursor: pointer;
 }
 .ei-event {
 	width: 410px;
