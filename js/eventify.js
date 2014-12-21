@@ -35,7 +35,7 @@ function mainEventify(settings) {
 
 	// get actual events for month and year
 	function getEvents(data, date) {
-		var out = ['<div id="ei-events'+settings.theme+'">', '<h2>'+date.format('MMMM')+' '+date.year()+'</h2>', '<div class="ei-events-container">'];
+		var out = ['<div id="ei-events'+settings.theme+'"><div class="ei-nav-container">', '<h2>'+date.format('MMMM')+' '+date.year()+'</h2>','<i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i>', '</div>', '<div class="ei-events-container">'];
 
 		for (i = 0; i < data.length; i++) {
 			if (date.month() === data[i].start.month() && date.year() === data[i].start.year() && currentDate.date() <= data[i].start.date()) {
