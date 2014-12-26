@@ -8,6 +8,7 @@ they are all included:
 * [jQuery](http://jquery.com)
 * [moment.js](http://momentjs.com/)
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [DotDotDot.js](http://dotdotdot.frebsite.nl/) (included)
 
 
 ## How to use?
