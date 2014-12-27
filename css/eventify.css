@@ -126,6 +126,7 @@
 	font-size: 13px;
 	height: 16px;
 	color: #7f7f7f;
+	padding-right: 5px;
 }
 
 /* #ei-events default hover styles
@@ -153,12 +154,15 @@
 }
 
 #ei-events-elegant h2 {
+	display: inline;
 	font-family: 'Bebas Neue';
 	font-weight: lighter;
 	font-size: 48px;
 	color: #bfbfbf;
 	margin: 0;
 	padding: 0;
+	padding-right: 10px;
+	text-align: left;
 }
 
 #ei-events-elegant .ei-event {
@@ -174,7 +178,8 @@
 }
 
 #ei-events-elegant .ei-event:hover {
-	
+	opacity: 0.7;
+   filter: alpha(opacity=70); /* For IE8 and earlier */
 }
 
 /* #ei-events dark styles
@@ -187,12 +192,15 @@
 }
 
 #ei-events-dark h2 {
+	display: inline;
 	font-family: 'Bebas Neue';
 	font-weight: lighter;
 	font-size: 48px;
 	color: #bfbfbf;
 	margin: 0;
 	padding: 0;
+	padding-right: 10px;
+	text-align: left;
 }
 
 #ei-events-dark .ei-event {

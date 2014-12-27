@@ -705,6 +705,9 @@ function mainEventify(settings) {
 
 	var currentDate = moment();
 
+	// theme 
+	$(settings.div.selector).attr("id","ei-events"+settings.theme+"");
+
 	// get actual events for month and year
 	function getEvents(data, date) {
 		var out = ['<div id="ei-events'+settings.theme+'"><div class="ei-nav-container">', '<h2>'+date.format('MMMM')+' '+date.year()+'</h2>','<i class="fa fa-chevron-circle-left ei-arrow-left"></i><i class="fa fa-chevron-circle-right ei-arrow-right"></i>', '</div>', '<div class="ei-events-container">'];
@@ -728,7 +731,7 @@ function mainEventify(settings) {
 
 		out.push('</div>', '</div>');
 		out = out.join('\n');
-		$("div"+settings.div.selector+"").replaceWith(out);
+		$("div"+settings.div.selector+settings.theme+"").replaceWith(out);
 
 		$( ".ei-arrow-left" ).click(function() {
 		  getEvents(data,currentDate.add({months:-1}));
